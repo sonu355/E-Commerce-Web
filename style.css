@@ -2,9 +2,11 @@
     box-sizing: border-box;
 }
 .navlist{
-    width: 100%;
+
     background-color: darkgrey;
-    position: absolute;
+    position: fixed;
+    margin-right: 50px;
+    width: 98.6%;
 }
 .navlist a {
     float:right;
@@ -14,6 +16,11 @@
     padding: 12px;
     text-decoration: none;
     font-size: 1.5em;
+}
+.navlist h1{
+    margin-left: 20px;
+    font:italic;
+    font-size: 3rem;
 }
 .search{
     float: right;
@@ -25,30 +32,8 @@
     border-radius:25px;
     border: none;
 }
-.slideshow{
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
+main{
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 3px gray;
 }
-/* .myslides{
-    display: none;
-} */
-.prev,.next{
-    cursor: pointer;
-    position: absolute;
-    top: 50%;;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-.next{
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-.prev
