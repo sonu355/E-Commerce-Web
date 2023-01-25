@@ -3,27 +3,40 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <title>SHOPLANE</title>
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
 </head>
 <body>
-    <div>
-        <div class="navlist">
-            <h1>SHOPLANE</h1>
-            <a href="">CLOTHING</a>
-            <a href="">ACCESSORIES</a>
-            <a href="">ORDER HISTORY</a>
-            <div class="search">
-                <form action="#">
-                    <input type="text"
-                        placeholder=" Search for clothing and accesories "
-                        name="search">
-                </form>
+    <header>
+        <div class="topnav">
+            <img class="cart image" href="" src="/img/icons8-shopping-cart-60.png" alt="">
+            <input type="text" placeholder="Search for clothing and accesories">
+            <a href="">Accessories</a>
+            <a href="">Clothing</a>
+            <h1 class="active" href="">SHOPLANE</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              ...
             </div>
-        </div>
-        <div>
-            <main>
-                
-            </main>
-        </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+          </div>
+          
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>
