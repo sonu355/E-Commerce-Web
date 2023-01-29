@@ -1,0 +1,20 @@
+
+
+.topnav{
+    border: 2px solid red;
+    justify-content: center;
+}
+.topnav span{
+    font-size: 3rem;
+    margin-left: 500px;
+}
+.topnav img{
+    margin-top: 5px;
+}
+.cart-row{
+    display: flex;
+}
+.cart-item{
+
+}
+.cart
