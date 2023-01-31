@@ -37,6 +37,22 @@ margin-left: 150px;
     font-weight: bolder;
     border-radius: 0.3px;
     margin-left: 5px;
+    height: 34px;
+}
+.cart-quantity-column button:hover{
+    background-color: #cc4c4c;
+}
+.cart-quantity-input{
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    margin-right: 25px;
+    font-size: 1.2em;
 }
 .cart-column{
     display: flex;
@@ -53,14 +69,32 @@ margin-left: 150px;
 .cart-total button{
     text-align: center;
 }
-.purchase button{
+.btn-purchase{
     display: block;
     margin: 48px auto 80px auto;
-    font-size: 1.75em;
-    color: white;
-    background-color: lightseagreen;
+    font-size: 1.5em;
+    color: rgb(7, 0, 0);
+    background-color: rgb(197, 209, 28);
+    border-radius: 10px;
 }
 .purchase button:hover{
     color: black;
     background-color: aqua;
 }
+.purchase .cart-total{
+    margin-right: 280px;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+.containerFooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #333;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -30px;
+    border-radius: 0.3px;
+  }
+ 
