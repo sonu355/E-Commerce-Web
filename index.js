@@ -30,7 +30,10 @@ for (var i = 0; i < addToCartButtons.length; i++) {
   var button = addToCartButtons[i]
   console.log("button",button)
   button.addEventListener('click', addToCartClicked)
+  
 }
+
+
 
 //for the function of addto cart button
 function addToCartClicked(event) {
@@ -43,15 +46,46 @@ function addToCartClicked(event) {
   var price = shopItem.getElementsByClassName('price')[0].innerText
   var image = shopItem.getElementsByClassName('cart-item-image')[0].src
   console.log(title,price,image)
-  addItemToCart(title,price,image)
+  addInDB(title,price,image)
+  addCartItem(title,price,image)
+  addInDB(title,price,image)
 }
 
- function addItemToCart(title,price,image){
- var cartRow = document.createElement('div')
- cartRow.innerText = title
- var cartItems = document.getElementsByClassName('cart-items')[0]
- cartItems.append(cartRow)
+db = new Array();
+
+function addInDB(title, price, image){
+  const productObject = {
+    title: title,
+    price: price,
+    imageUrl: image
+  }
+  db.push(productObject)
+  console.log(db)
+
+  
 }
+
+function addCartItem(title,price,image){
+  for(var i = 0 ; i < db.length; i++)
+    var cartItem = db[i];
+    console.log(cartItem)
+    var cartRow = document.createElement('div')
+    var cartRowContents = `
+    <div class="cart-item cart-column">
+      <img class="cart-item-image"src="${cartItem.imageUrl}" height="100px"width="75px">
+      <span class="cart-item-title">${cartItem.title}</span>
+    </div>
+    <span class="cart-item-price cart-column">${cartItem.price}</span>
+    <div class="cart-quantity-column cart-column">
+        <input onchange="onChangeQuantity(event)" class="cart-quantity-input" type="number" value="1">
+        <button class="btn" 
+        role="button">Remove</button>
+    </div>  `
+    cartRowContents.innerHTML = cartRow
+ 
+   
+  }
+
 
 function setOnChangeAttribute() {
   var cartQuantityInputs = document.getElementsByClassName('cart-quantity-input')
